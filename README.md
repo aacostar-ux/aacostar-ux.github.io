@@ -1,0 +1,617 @@
+# Resume
+Alina AR Resume
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alina Acosta-Romay — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a2e;
+    --sidebar-bg: #1a1a2e;
+    --accent: #c084fc;
+    --accent-soft: #e9d5ff;
+    --accent-dim: #7c3aed;
+    --white: #fafafa;
+    --muted: #94a3b8;
+    --divider: rgba(192,132,252,0.25);
+    --body-bg: #f1f0ee;
+    --tag-bg: rgba(192,132,252,0.12);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+  }
+
+  .page {
+    width: 900px;
+    min-height: 1170px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    grid-column: 1 / -1;
+    background: var(--sidebar-bg);
+    padding: 36px 36px 32px 36px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+    align-items: end;
+  }
+
+  .header-left {
+    padding-right: 28px;
+  }
+
+  .name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .name em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .header-right {
+    padding-left: 28px;
+    border-left: 1px solid var(--divider);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+    color: rgba(250,250,250,0.75);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact-item .icon {
+    color: var(--accent);
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .availability {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(192,132,252,0.15);
+    border: 1px solid rgba(192,132,252,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  .dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: #f8f7f5;
+    border-right: 1px solid #e8e6e2;
+    padding: 28px 22px;
+  }
+
+  .sidebar-section { margin-bottom: 26px; }
+
+  .sidebar-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid var(--divider);
+  }
+
+  .summary-text {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #374151;
+    font-weight: 300;
+  }
+
+  .summary-text strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .skill-group { margin-bottom: 14px; }
+
+  .skill-group-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 400;
+    color: #4b5563;
+    background: var(--tag-bg);
+    border: 1px solid rgba(192,132,252,0.2);
+    border-radius: 3px;
+    padding: 2px 6px;
+    line-height: 1.5;
+  }
+
+  .edu-item { margin-bottom: 10px; }
+
+  .edu-degree {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .edu-school {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .lang-name { font-size: 11px; font-weight: 500; color: var(--ink); }
+
+  .lang-level {
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .lang-bar {
+    height: 3px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .lang-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+    border-radius: 2px;
+  }
+
+  .identity-block {
+    background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(192,132,252,0.05));
+    border: 1px solid rgba(192,132,252,0.2);
+    border-radius: 6px;
+    padding: 12px;
+  }
+
+  .identity-text {
+    font-size: 11px;
+    line-height: 1.65;
+    color: #374151;
+    font-style: italic;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    padding: 28px 30px;
+    overflow: hidden;
+  }
+
+  .section { margin-bottom: 22px; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    white-space: nowrap;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--divider), transparent);
+  }
+
+  /* Job entries */
+  .job { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f0ede8; }
+  .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2px;
+    gap: 12px;
+  }
+
+  .job-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .job-dates {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .job-company {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-dim);
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+  }
+
+  .job-context {
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 7px;
+    line-height: 1.5;
+  }
+
+  .job-bullets { list-style: none; }
+
+  .job-bullets li {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #374151;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+    font-weight: 300;
+  }
+
+  .job-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 1.5px;
+    background: var(--accent);
+  }
+
+  .job-bullets li strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Earlier experience */
+  .earlier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+
+  .earlier-item {
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .earlier-item strong {
+    color: var(--ink);
+    font-weight: 500;
+    display: block;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="name">Alina <em>Acosta</em>-Romay</div>
+      <div class="tagline">Director of Operations & People</div>
+    </div>
+    <div class="header-right">
+      <div class="contact-grid">
+        <div class="contact-item"><span class="icon">📍</span> Montreal, QC</div>
+        <div class="contact-item"><span class="icon">📞</span> 819.598.3867</div>
+        <div class="contact-item"><span class="icon">✉</span> aacostar.aar@gmail.com</div>
+        <div class="contact-item"><span class="icon">🔗</span> linkedin.com/in/acostaromay</div>
+      </div>
+      <div class="availability"><span class="dot"></span> Available immediately · EN / FR / ES</div>
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Profile</div>
+      <p class="summary-text">Operations and people leader with <strong>10+ years</strong> building systems, processes, and organizational infrastructure in SME, nonprofit, and startup environments — <strong>from scratch.</strong><br><br>I find what is broken, build what is missing, and stay long enough to make sure it works.</p>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Core Skills</div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Operations</div>
+        <div class="skill-tags">
+          <span class="tag">Systems Design</span>
+          <span class="tag">Process Documentation</span>
+          <span class="tag">Policy Development</span>
+          <span class="tag">Vendor Management</span>
+          <span class="tag">Tool Implementation</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Finance</div>
+        <div class="skill-tags">
+          <span class="tag">Budgeting & Forecasting</span>
+          <span class="tag">Financial Controls</span>
+          <span class="tag">P&L Management</span>
+          <span class="tag">Reporting Automation</span>
+          <span class="tag">Grant & Funder Reporting</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">People & HR</div>
+        <div class="skill-tags">
+          <span class="tag">Team Leadership</span>
+          <span class="tag">Recruitment & Onboarding</span>
+          <span class="tag">Performance Management</span>
+          <span class="tag">Culture-Building</span>
+          <span class="tag">Training & Development</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Compliance</div>
+        <div class="skill-tags">
+          <span class="tag">Data Governance</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Employment Standards</span>
+          <span class="tag">Regulatory Compliance</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">Excel (Advanced)</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">QuickBooks</span>
+          <span class="tag">HubSpot / Salesforce</span>
+          <span class="tag">Trello</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Tableau</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Languages</div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Native</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+      <div class="lang-row"><span class="lang-name">French</span><span class="lang-level">Professional</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:88%"></div></div>
+      <div class="lang-row"><span class="lang-name">Spanish</span><span class="lang-level">Native</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">MA, Economics (30 credits)</div>
+        <div class="edu-school">University of Ottawa · 2014–2017</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">BA Honours, Economics — Top 10%</div>
+        <div class="edu-school">University of Calgary · 2013</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">BA, International Relations</div>
+        <div class="edu-school">University of Calgary · 2013</div>
+      </div>
+      <div class="edu-item" style="margin-top:8px;">
+        <div class="edu-school">HACCP Certification · Google Ads Certified</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Community</div>
+      <div class="identity-block">
+        <p class="identity-text">Bisexual woman, parent of a transman, and support system to several 2SLGBTQIA+ youth. Committed to this community not as an ally — as a member.</p>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Professional Experience</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">General Manager</div>
+            <div class="job-company">Nature Expert · Montreal, QC</div>
+          </div>
+          <div class="job-dates">Apr 2024 – May 2025</div>
+        </div>
+        <div class="job-context">Quebec's leading specialty birding retailer — $1.8M revenue, 5-person team, 700+ SKUs. Owner absent 8+ months. No documented processes, no operational infrastructure.</div>
+        <ul class="job-bullets">
+          <li>Built and ran the full organizational infrastructure independently during an 8+ month leadership gap — staff scheduling, supplier management, inventory governance, order fulfillment, and financial decision-making simultaneously with <strong>zero disruptions.</strong></li>
+          <li>Led a 5-person team through a period of sustained uncertainty — managed scheduling, performance conversations, conflict resolution, and day-to-day culture with no executive oversight.</li>
+          <li>Recruited, onboarded, and trained a replacement manager from scratch — built the documentation, process playbooks, and knowledge transfer system for a clean handoff.</li>
+          <li>Built operational processes where none existed: buying cadences, supplier protocols, fulfillment workflows, and financial reporting templates — took the business from systems in the owner's head to <strong>repeatable, transferable infrastructure.</strong></li>
+          <li>Cut fulfillment costs <strong>33% ($39K/year)</strong> by rebuilding the cost model and renegotiating carrier rates.</li>
+          <li>Stopped a 4-year revenue decline — both 2024 and 2025 showed growth.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Growth & Financial Strategy Consultant</div>
+            <div class="job-company">Nature Expert · Montreal, QC</div>
+          </div>
+          <div class="job-dates">Jul 2025 – Feb 2026</div>
+        </div>
+        <div class="job-context">Returned to build financial infrastructure and complete the strategic growth plan.</div>
+        <ul class="job-bullets">
+          <li>Produced a full organizational diagnostic across 7 documents — 4-year financial analysis, 67-idea strategic matrix, and 6-engine growth model — synthesized into a <strong>3-year roadmap targeting $1.8M → $2.85M revenue.</strong></li>
+          <li>Rebuilt 4 years of monthly P&Ls from bank ledgers — corrected misclassifications, surfaced true profitability by category, channel, and SKU for the first time.</li>
+          <li>Built reporting automation reducing P&L compilation from 25–30 hrs to 5–6 hrs (<strong>80% reduction</strong>) — enabling monthly reviews instead of annual.</li>
+          <li>Designed Open-to-Buy inventory governance system — identified <strong>~$150K annual gross profit improvement;</strong> delivered as ready-to-implement framework.</li>
+          <li>Identified <strong>$600K+</strong> in recoverable revenue across pricing, shipping policy, conversion, dead stock, and idle capital.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Business Development Manager — Quebec & Nunavut</div>
+            <div class="job-company">CQCC – Canadian Queer Chamber of Commerce · Montreal, QC</div>
+          </div>
+          <div class="job-dates">Mar – Jun 2025</div>
+        </div>
+        <div class="job-context">Grant-funded nonprofit serving 2SLGBTQI+ business owners across Canada — mission-driven, bilingual, accountability-driven.</div>
+        <ul class="job-bullets">
+          <li>Led Supplier Diversity Certification program in Quebec & Nunavut — <strong>surpassed enrollment targets,</strong> onboarding 8 new 2SLGBTQI+ entrepreneurs.</li>
+          <li>Delivered bilingual (EN/FR) coaching to SME founders on operations, pricing, go-to-market strategy, and revenue growth.</li>
+          <li>Tracked program deliverables, managed reporting timelines, and aligned activities to funder compliance requirements.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Founder & Product Developer</div>
+            <div class="job-company">Nutality Foods Inc. · Montreal, QC</div>
+          </div>
+          <div class="job-dates">May 2018 – Mar 2025</div>
+        </div>
+        <div class="job-context">Built 3 CPG product lines from formulation through retail distribution — 13+ SKUs, 40+ retail accounts, full supply chain and operations.</div>
+        <ul class="job-bullets">
+          <li>Managed a distributed network of external collaborators — food scientists, co-manufacturers, regulatory consultants, packaging designers, retail buyers — coordinating timelines and compliance with no formal team structure.</li>
+          <li>Built all internal systems from scratch: financial tracking, vendor governance, inventory management, pricing models, and regulatory compliance documentation.</li>
+          <li>Tested initial brand in-store; identified positioning mismatch through direct consumer observation; rebuilt brand identity from scratch — validated before relaunch. <strong>Systems-thinking applied to real commercial risk.</strong></li>
+          <li>Raised <strong>$85K</strong> through validated investor pitch decks; built distribution from <strong>0 to 40+ retail accounts.</strong></li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Market Research & Project Officer</div>
+            <div class="job-company">Trade Facilitation Office of Canada (TFO) · Ottawa, ON</div>
+          </div>
+          <div class="job-dates">Feb 2017 – May 2018</div>
+        </div>
+        <div class="job-context">Nonprofit funded by Global Affairs Canada — delivering trade facilitation programs to international SMEs.</div>
+        <ul class="job-bullets">
+          <li>Produced bilingual market entry reports tied directly to federal funding mandates and program outcome reporting — operated within grant accountability frameworks standard to the sector.</li>
+          <li>Facilitated B2B trade partnerships at SIAL Montreal 2018; analyzed market data using Excel, Tableau, and Power BI.</li>
+        </ul>
+      </div>
+
+      <div class="section-header" style="margin-top:16px;">
+        <span class="section-title">Earlier Roles</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="earlier-grid">
+        <div class="earlier-item">
+          <strong>International Market Expansion Manager</strong>
+          The Rainforest Company · Ottawa · 2016–2017<br>
+          0 → 40+ B2B accounts; 4 → 30+ SKUs; CFIA compliance
+        </div>
+        <div class="earlier-item">
+          <strong>Business Development Manager</strong>
+          Allied Scientific Pro · Gatineau · 2014–2015<br>
+          Top conversion on technical sales team; opened museum/gallery market segment
+        </div>
+        <div class="earlier-item">
+          <strong>Economic Energy Advisor</strong>
+          Embassy of Korea to Canada · Ottawa · 2015–2016
+        </div>
+        <div class="earlier-item">
+          <strong>Co-Founder</strong>
+          Farms To You Canada · Calgary · 2006–2008<br>
+          Wholesale flower distribution; Walmart, Co-Op, 250+ florists
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
