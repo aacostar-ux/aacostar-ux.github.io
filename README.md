@@ -481,7 +481,7 @@
     <div class="sidebar-section">
       <div class="sidebar-label">Community</div>
       <div class="identity-block">
-        <p class="identity-text">Bisexual woman, parent of a transman, and support system to several 2SLGBTQIA+ youth. Committed to this community not as an ally — as a member.</p>
+        <p class="identity-text">Bisexual woman, parent of a transman, and support system to several 2SLGBTQIA+ youth.</p>
       </div>
     </div>
 
