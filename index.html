@@ -66,22 +66,6 @@
     gap: 5px;
   }
 
-  .availability {
-    margin-top: 12px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(192,132,252,0.15);
-    border: 1px solid rgba(192,132,252,0.3);
-    border-radius: 20px;
-    padding: 4px 12px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--accent);
-  }
-
-  .dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
-
   /* ── BODY LAYOUT ── */
   .body-wrap {
     display: flex;
@@ -299,9 +283,6 @@
       gap: 6px 16px;
     }
 
-    .tagline { margin-top: 6px; }
-    .availability { margin-top: 10px; }
-
     .body-wrap {
       display: grid;
       grid-template-columns: 260px 1fr;
@@ -334,15 +315,14 @@
   <header class="header">
     <div class="header-left">
       <div class="name">Alina <em>Acosta</em>-Romay</div>
-      <div class="tagline">Director of Operations &amp; People</div>
-      <div class="availability"><span class="dot"></span> Available immediately</div>
+      <div class="tagline">Director of Operations &amp; People &nbsp;·&nbsp; Systems Builder &nbsp;·&nbsp; Nonprofit &amp; SME &nbsp;·&nbsp; Bilingual EN/FR</div>
     </div>
     <div class="contact-grid">
       <div class="contact-item">📍 Montreal, QC</div>
       <div class="contact-item">📞 819.598.3867</div>
       <div class="contact-item">✉ aacostar.aar@gmail.com</div>
       <div class="contact-item">🔗 linkedin.com/in/acostaromay</div>
-      <div class="contact-item" style="grid-column:1/-1;margin-top:2px;color:rgba(250,250,250,0.5);font-size:11px;letter-spacing:1px">EN / FR / ES</div>
+      <div class="contact-item" style="grid-column:1/-1; margin-top:2px; color:rgba(250,250,250,0.5); font-size:11px; letter-spacing:1px;">EN / FR / ES</div>
     </div>
   </header>
 
@@ -353,7 +333,7 @@
 
       <div class="section">
         <div class="section-header"><span class="section-title">Profile</span><div class="section-rule"></div></div>
-        <p class="summary-text">Operations and people leader with <strong>10+ years</strong> building systems, processes, and organizational infrastructure in SME, nonprofit, and startup environments — <strong>from scratch.</strong><br><br>I find what is broken, build what is missing, and stay long enough to make sure it works.</p>
+        <p class="summary-text">Operations and people leader with <strong>15+ years</strong> building systems, processes, and organizational infrastructure in SME, nonprofit, and startup environments — <strong>from scratch.</strong></p>
       </div>
 
       <div class="section">
@@ -362,7 +342,7 @@
         <div class="skill-group">
           <div class="skill-group-label">Operations</div>
           <div class="skill-tags">
-            <span class="tag">Systems Design</span><span class="tag">Process Documentation</span><span class="tag">Policy Development</span><span class="tag">Vendor Management</span><span class="tag">Tool Implementation</span>
+            <span class="tag">Operational Systems &amp; Workflow Design</span><span class="tag">Process Documentation</span><span class="tag">Policy Development</span><span class="tag">Vendor Management</span><span class="tag">Tool Implementation</span>
           </div>
         </div>
 
@@ -383,14 +363,14 @@
         <div class="skill-group">
           <div class="skill-group-label">Compliance</div>
           <div class="skill-tags">
-            <span class="tag">Data Governance</span><span class="tag">Risk Management</span><span class="tag">Employment Standards</span><span class="tag">Regulatory Compliance</span>
+            <span class="tag">Data Governance</span><span class="tag">Risk Management</span><span class="tag">Regulatory Compliance</span><span class="tag">Employment Standards</span><span class="tag">Organizational Policy</span>
           </div>
         </div>
 
         <div class="skill-group">
           <div class="skill-group-label">Tools</div>
           <div class="skill-tags">
-            <span class="tag">Excel (Advanced)</span><span class="tag">Power BI</span><span class="tag">QuickBooks</span><span class="tag">HubSpot / Salesforce</span><span class="tag">Trello</span><span class="tag">Google Workspace</span><span class="tag">Shopify</span><span class="tag">Tableau</span>
+            <span class="tag">Excel (Advanced)</span><span class="tag">Power BI</span><span class="tag">QuickBooks</span><span class="tag">Shopify</span><span class="tag">CRM (HubSpot/Salesforce)</span><span class="tag">Trello</span><span class="tag">Google Workspace</span><span class="tag">Tableau</span>
           </div>
         </div>
       </div>
@@ -413,16 +393,16 @@
 
       <div class="section">
         <div class="section-header"><span class="section-title">Education</span><div class="section-rule"></div></div>
-        <div class="edu-item"><div class="edu-degree">MA, Economics (30 credits)</div><div class="edu-school">University of Ottawa · 2014–2017</div></div>
+        <div class="edu-item"><div class="edu-degree">Master of Arts, Economics (30 credits completed)</div><div class="edu-school">University of Ottawa · 2014–2017</div></div>
         <div class="edu-item"><div class="edu-degree">BA Honours, Economics — Top 10%</div><div class="edu-school">University of Calgary · 2013</div></div>
         <div class="edu-item"><div class="edu-degree">BA, International Relations</div><div class="edu-school">University of Calgary · 2013</div></div>
-        <div class="edu-item" style="margin-top:8px"><div class="edu-school">HACCP Certification · Google Ads Certified</div></div>
+        <div class="edu-item" style="margin-top:8px"><div class="edu-school">HACCP Certification (2018)</div></div>
       </div>
 
       <div class="section">
         <div class="section-header"><span class="section-title">Community</span><div class="section-rule"></div></div>
         <div class="identity-block">
-          <p class="identity-text">Queer woman, parent of a trans-young-man, and loving support system to many 2SLGBTQIA+ people. Committed to the 2SLGBTQIA+ community.</p>
+          <p class="identity-text">Queer woman, parent of a trans young man, and loving support system to many 2SLGBTQIA+ people.</p>
         </div>
       </div>
 
@@ -439,13 +419,16 @@
             <div><div class="job-title">General Manager</div><div class="job-company">Nature Expert · Montreal, QC</div></div>
             <div class="job-dates">Apr 2024 – May 2025</div>
           </div>
-          <div class="job-context">Quebec's leading specialty birding retailer — $1.8M revenue, 5-person team, 700+ SKUs. Owner absent 8+ months. No documented processes, no operational infrastructure.</div>
+          <div class="job-context">Quebec's leading specialty birding retailer — $1.8M annual revenue, 5-person team, 700+ SKUs. Owner absent 8+ months. No documented processes, no operational infrastructure. French first environment.</div>
           <ul class="job-bullets">
-            <li>Built and ran the full organizational infrastructure independently during an 8+ month leadership gap — staff scheduling, supplier management, inventory governance, fulfillment, and financial decision-making simultaneously with <strong>zero disruptions.</strong></li>
-            <li>Led a 5-person team through sustained uncertainty — performance conversations, conflict resolution, scheduling, and culture with no executive oversight.</li>
-            <li>Recruited, onboarded, and trained a replacement manager from scratch — built documentation, process playbooks, and knowledge transfer system for a clean handoff.</li>
-            <li>Built operational processes where none existed: buying cadences, supplier protocols, fulfillment workflows, financial reporting templates — took the business from systems in the owner's head to <strong>repeatable, transferable infrastructure.</strong></li>
-            <li>Cut fulfillment costs <strong>33% ($39K/year);</strong> stopped a 4-year revenue decline — both 2024 and 2025 showed growth.</li>
+            <li>Built and ran the full organizational infrastructure independently during an 8+ month leadership gap — staff scheduling, supplier management, inventory governance, order fulfillment, financial decision-making, and customer escalations simultaneously with <strong>zero disruptions.</strong></li>
+            <li>Led a 5-person team across retail and e-commerce: managed scheduling, performance conversations, conflict resolution, and day-to-day team culture during a period of sustained uncertainty and no executive oversight.</li>
+            <li>Recruited, onboarded, and trained a replacement manager from scratch — built the onboarding documentation, process playbooks, and knowledge transfer system that allowed a clean operational handoff.</li>
+            <li>Built operational processes and documentation where none existed: buying cadences, supplier protocols, fulfillment workflows, and financial reporting templates — took the business from informal systems to repeatable, transferable infrastructure.</li>
+            <li>Led technology implementation to ensure operational continuity past my exit: built an Excel-based accounting and monthly P&amp;L automation protocol; introduced HubSpot for marketing planning, content scheduling, and posting workflows; set up Slack for direct team communication; rebuilt the customer newsletter on Mailchimp; managed the e-commerce platform on OpenCart; and introduced an AI-assisted content repurposing system to transform 15+ years of archived birding newsletters into fresh community content.</li>
+            <li>Oversaw vendor relationships with 20+ suppliers — managed contracts, negotiations, payment terms, and compliance; resolved disputes independently.</li>
+            <li>Cut fulfillment costs <strong>33% ($39K/year)</strong> by rebuilding the cost model and renegotiating carrier rates; redesigned pricing across 165 SKUs based on margin analysis and competitive data.</li>
+            <li>Stopped a 4-year revenue decline — both 2024 and 2025 had growth.</li>
           </ul>
         </div>
 
@@ -454,24 +437,26 @@
             <div><div class="job-title">Growth &amp; Financial Strategy Consultant</div><div class="job-company">Nature Expert · Montreal, QC</div></div>
             <div class="job-dates">Jul 2025 – Feb 2026</div>
           </div>
-          <div class="job-context">Returned to build financial infrastructure and the strategic growth plan.</div>
+          <div class="job-context">Returned to build financial infrastructure and complete the strategic growth plan.</div>
           <ul class="job-bullets">
-            <li>Produced a full organizational diagnostic — 4-year financial analysis, 67-idea strategic matrix, 6-engine growth model — synthesized into a <strong>3-year roadmap targeting $1.8M → $2.85M revenue.</strong></li>
-            <li>Rebuilt 4 years of monthly P&Ls from bank ledgers; built reporting automation reducing compilation from 25–30 hrs to 5–6 hrs (<strong>80% reduction</strong>).</li>
-            <li>Designed Open-to-Buy inventory governance system — identified <strong>~$150K annual gross profit improvement.</strong></li>
-            <li>Identified <strong>$600K+</strong> in recoverable revenue across pricing, shipping, conversion, dead stock, and idle capital.</li>
+            <li>Rebuilt 4 years of monthly P&amp;Ls from bank ledgers — corrected expense misclassifications, built category-level reporting, and gave the organization its first real view of margin, seasonality, and cost drivers by channel and SKU.</li>
+            <li>Built reporting automation, reducing monthly P&amp;L compilation from 25–30 hrs to 5–6 hrs (<strong>80% reduction</strong>) — enabled monthly financial reviews instead of annual.</li>
+            <li>Designed and modeled an Open-to-Buy inventory governance system with monthly budgets, seasonality-based allocation, and hard-stop rules — identified <strong>~$150K annual gross profit improvement;</strong> delivered as a ready-to-implement framework.</li>
+            <li>Identified <strong>$600K+</strong> in recoverable revenue across pricing, shipping policy, conversion, dead stock, and idle capital — sequenced by impact and feasibility into a phased implementation plan.</li>
+            <li>Produced a full organizational diagnostic across 7 documents — financial analysis, strategic idea matrix, and 6-engine growth model — synthesized into a 3-year roadmap for increasing yearly revenue to $2.5M+.</li>
           </ul>
         </div>
 
         <div class="job">
           <div class="job-header">
-            <div><div class="job-title">Business Development Manager — Quebec &amp; Nunavut</div><div class="job-company">CQCC – Canadian Queer Chamber of Commerce · Montreal, QC</div></div>
-            <div class="job-dates">Mar – Jun 2025</div>
+            <div><div class="job-title">Business Development Manager – Quebec &amp; Nunavut</div><div class="job-company">CQCC – Canadian Queer Chamber of Commerce · Montreal, QC</div></div>
+            <div class="job-dates">Mar 2025 – Jun 2025</div>
           </div>
-          <div class="job-context">Grant-funded nonprofit serving 2SLGBTQI+ business owners — mission-driven, bilingual, funder-accountable.</div>
+          <div class="job-context">Nonprofit advocacy and entrepreneurship organization serving 2SLGBTQI+ business owners across Canada — grant-funded, mission-driven, bilingual.</div>
           <ul class="job-bullets">
-            <li>Led Supplier Diversity Certification in Quebec &amp; Nunavut — <strong>surpassed enrollment targets,</strong> onboarding 8 new 2SLGBTQI+ entrepreneurs.</li>
-            <li>Delivered bilingual (EN/FR) coaching to SME founders; tracked program deliverables and funder compliance requirements.</li>
+            <li>Led the Supplier Diversity Certification program for Quebec and Nunavut — surpassed enrollment targets, onboarding 8 new 2SLGBTQI+ entrepreneurs into the certification pipeline.</li>
+            <li>Delivered bilingual (EN/FR) business coaching to SME founders on operations, pricing, go-to-market strategy, product-market-fit, and revenue growth.</li>
+            <li>Operated in a grant-funded nonprofit environment: tracked program deliverables, managed reporting timelines, and aligned activities to funder expectations and compliance requirements.</li>
           </ul>
         </div>
 
@@ -480,34 +465,57 @@
             <div><div class="job-title">Founder &amp; Product Developer</div><div class="job-company">Nutality Foods Inc. · Montreal, QC</div></div>
             <div class="job-dates">May 2018 – Mar 2025</div>
           </div>
-          <div class="job-context">3 CPG product lines, 13+ SKUs, 40+ retail accounts — all operations, supply chain, and finances managed simultaneously.</div>
+          <div class="job-context">Built 3 CPG product lines from formulation through retail distribution — managed all operations, finances, supply chain, and external collaborators simultaneously.</div>
           <ul class="job-bullets">
-            <li>Managed distributed collaborators — food scientists, co-manufacturers, regulatory consultants, packaging designers, retail buyers — coordinating timelines and compliance with no formal team structure.</li>
-            <li>Built all internal systems from scratch: financial tracking, vendor governance, inventory management, pricing models, regulatory compliance documentation.</li>
-            <li>Tested brand in-store; identified positioning mismatch; rebuilt identity from scratch — validated before relaunch. Raised <strong>$85K;</strong> built distribution from <strong>0 to 40+ retail accounts.</strong></li>
+            <li>Managed a distributed network of external collaborators — nutritionists, food scientists, packaging designers, co-packers, regulatory consultants, and retail brokers — coordinating timelines, deliverables, and compliance across all relationships without a formal team structure.</li>
+            <li>Built all internal systems from scratch in a startup environment: financial tracking, vendor governance, inventory management, pricing models, and distribution documentation.</li>
+            <li>Tested initial brand (CookieTella) in-store; identified positioning mismatch through direct consumer observation; rebuilt brand from scratch — new name, identity, and target demographic — validated before relaunch.</li>
+            <li>Raised <strong>$85K</strong> through validated investor pitch decks and financial models; built retail distribution from 0 to <strong>40+ retail accounts</strong> through cold approach and relationship building.</li>
           </ul>
         </div>
 
         <div class="job">
           <div class="job-header">
-            <div><div class="job-title">Market Research &amp; Project Officer</div><div class="job-company">Trade Facilitation Office of Canada (TFO) · Ottawa, ON</div></div>
+            <div><div class="job-title">Market Research &amp; Strategy Consultant</div><div class="job-company">Trade Facilitation Office of Canada (TFO Canada) · Ottawa, ON</div></div>
             <div class="job-dates">Feb 2017 – May 2018</div>
           </div>
-          <div class="job-context">Nonprofit funded by Global Affairs Canada — trade facilitation programs for international SMEs.</div>
+          <div class="job-context">Non-profit organization delivering trade facilitation programs to international SMEs — government-funded, bilingual, compliance-driven.</div>
           <ul class="job-bullets">
-            <li>Produced bilingual market entry reports tied to federal funding mandates and program outcome reporting — operated within grant accountability frameworks standard to the sector.</li>
-            <li>Facilitated B2B trade partnerships at SIAL Montreal 2018; analyzed market data using Excel, Tableau, and Power BI.</li>
+            <li>Produced market entry research reports for international SMEs across food, textiles, technology, and construction — deliverables tied directly to federal funding mandates and program outcome reporting.</li>
+            <li>Managed reporting timelines and deliverable compliance aligned to government funder requirements — operated within structured accountability frameworks typical of grant-funded organizations.</li>
+            <li>Represented TFO Canada at SIAL Montreal 2018 — supported 40+ entrepreneurs from developing countries attending the show, helping them connect with Canadian buyers and distributors to secure market entry and future sales. Prepared supporting documents and presentations for the event. Walked the show floor to collect trend data on the Canadian food industry, which I later synthesized into an updated market report delivered to TFO stakeholders.</li>
+            <li>Used Excel, Tableau, and Nielsen I to analyze consumer demand, pricing structures, and market positioning opportunities; produced trilingual (EN/FR/ES) reports and stakeholder materials.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div><div class="job-title">International Market Expansion Manager</div><div class="job-company">The Rainforest Company · Ottawa, ON</div></div>
+            <div class="job-dates">Aug 2016 – Jan 2017</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Grew B2B customer base from 0 to 30+ accounts; expanded product portfolio from 4 to 20+ SKUs; navigated CFIA compliance and import requirements for South American food products.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div><div class="job-title">Business Development Specialist</div><div class="job-company">Allied Scientific Pro · Gatineau, QC</div></div>
+            <div class="job-dates">Dec 2014 – Sep 2015</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Achieved highest call-to-sale conversion on technical sales team; identified and opened new institutional market segments (museums and galleries) creating 8+ year client relationships.</li>
           </ul>
         </div>
 
         <div class="section-header" style="margin-top:16px;">
-          <span class="section-title">Earlier Roles</span><div class="section-rule"></div>
+          <span class="section-title">Earlier Experience</span><div class="section-rule"></div>
         </div>
         <div class="earlier-grid">
-          <div class="earlier-item"><strong>International Market Expansion Manager</strong>The Rainforest Company · Ottawa · 2016–2017<br>0 → 40+ B2B accounts; CFIA compliance</div>
-          <div class="earlier-item"><strong>Business Development Manager</strong>Allied Scientific Pro · Gatineau · 2014–2015<br>Top conversion; opened museum/gallery market</div>
-          <div class="earlier-item"><strong>Economic Energy Advisor</strong>Embassy of Korea to Canada · Ottawa · 2015–2016</div>
-          <div class="earlier-item"><strong>Co-Founder</strong>Farms To You Canada · Calgary · 2006–2008<br>Walmart, Co-Op, 250+ florists</div>
+          <div class="earlier-item"><strong>Economic Energy Advisor</strong>Embassy of the Republic of Korea to Canada · Ottawa, ON · 2015–2016</div>
+          <div class="earlier-item"><strong>Project Officer, Innovation &amp; IP</strong>Innovate Calgary · Calgary, AB · 2013</div>
+          <div class="earlier-item"><strong>Energy Economics Intern</strong>Kinder Morgan Canada · Calgary, AB · 2012</div>
+          <div class="earlier-item"><strong>Co-Founder, Farms To You Canada</strong>Calgary, AB · 2006–2008. Wholesale fresh flower distribution; imported from Latin America, supplied Walmart, Co-Op Calgary, and 250+ florists.</div>
         </div>
 
       </div>
@@ -515,7 +523,7 @@
 
     <!-- PDF DOWNLOAD -->
     <div class="pdf-btn-wrap">
-      <a class="pdf-btn" href="Alina_Acosta_Romay_Resume.pdf" download>↓ Download PDF</a>
+      <a href="Alina_Acosta_Romay_Resume.pdf" class="pdf-btn">↓ Download PDF</a>
     </div>
 
   </div>
